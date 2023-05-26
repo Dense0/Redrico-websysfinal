@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Website</title>
 </head>
 <body>
     <main>
         <nav>
             <h1>Christian Henrick Don C. Redrico</h1>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="navClose()"></i>
                 <ul>
                     <li><a href="/Website_Final.html">Home</a></li>
                     <li><a href="/about.html">About</a></li>
@@ -19,6 +21,7 @@
                     <li><a href="#">Socials</a></li>
                 </ul>
             </div> 
+            <i class="fa-solid fa-bars" onclick="navOpen()"></i>
         </nav> 
         <div class="main-page">
             <div class="mainpage-container">
@@ -34,7 +37,7 @@
                         </div>
                     </div>
                     <div class="col-2">
-                        <img src="./img/russian 3kliksphillip.jpg" alt="img">
+                        <img src="./img/FB_pfp.jpg" alt="img">
                     </div>
                 </div>
             </div>
@@ -46,6 +49,17 @@
             <div class="footerline"></div>
             <small>© 2023. Imaginary Company All Rights Reserved</small>
         </footer>
+        <!--JAVASCRIPT-->
+        <script>
+            const navLinks = document.getElementById("navLinks");
+
+            function navClose(){
+                navLinks.style.right = "-200px"
+            }
+            function navOpen(){
+                navLinks.style.right = "0"
+            }
+        </script>
     </main>
 </body>
 </html>  
